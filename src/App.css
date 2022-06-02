@@ -9,7 +9,81 @@
   background-size: cover;
   height: 100vh;
 }
-
-.Header {
-  height: 100vh;
+/*
+.NavbarList:hover{
+  color: rgb(202, 7, 7);
+  border-bottom: 3px solid yellow;
 }
+.Cards {
+ 
+  transition-property: width;
+  transition-duration: 2s;
+}
+
+.Cards:hover {
+  width: 850px;
+  box-shadow: 6px 6px 6px 6px #222222;
+  cursor: pointer;
+  border-radius: 30px;
+  color: yellow;
+  
+ 
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+  .Cards:hover {
+    width: 400px;
+    box-shadow: 6px 6px 6px 6px #222222;
+    cursor: pointer;
+    border-radius: 30px;
+    
+   
+  }
+} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+  .Cards:hover {
+    width: 550px;
+    box-shadow: 6px 6px 6px 6px #222222;
+    cursor: pointer;
+    border-radius: 30px;
+    
+   
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+  .Cards:hover {
+    width: 550px;
+    box-shadow: 6px 6px 6px 6px #222222;
+    cursor: pointer;
+    border-radius: 30px;
+    
+   
+  }
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+  .Cards:hover {
+    width: 850px;
+    box-shadow: 6px 6px 6px 6px #222222;
+    cursor: pointer;
+    border-radius: 30px;
+    
+   
+  }
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {.Cards:hover {
+  width: 850px;
+  box-shadow: 6px 6px 6px 6px #222222;
+  cursor: pointer;
+  border-radius: 30px;
+   */
+ 
+/* }}  */ 

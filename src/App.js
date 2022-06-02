@@ -8,11 +8,12 @@ function App() {
     <>
 
     <Navbar />
-      <div className="flex">
+    <Card />
+      {/* <div className="flex flex-col md:flex-row lg:flex-row">
         {[1, 2, 3].map(() => {
           return <Card />;
         })}
-      </div>
+      </div> */}
     </>
   );
 }
