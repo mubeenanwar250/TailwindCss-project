@@ -8,20 +8,20 @@ function Navbar() {
               CodingLab
             </h2>
             <nav>
-              <ul className=" flex flex-col text-xl font-medium text-white md:flex-row md:space-x-8 mt-4 ml-10 ">
-                <li className="NavbarList">
+              <ul className=" flex flex-col text-xl font-medium text-white md:flex-row md:space-x-8 mt-4 ml-10  ">
+                <li className="hover:text-red-500">
                   <a href="#" >Home</a>
                 </li>
-                <li  className="NavbarList">
+                <li  className="hover:text-red-500">
                   <a href="#">About</a>
                 </li>
-                <li  className="NavbarList">
+                <li  className="hover:text-red-500">
                   <a href="#">Services</a>
                 </li>
-                <li  className="NavbarList">
+                <li  className="hover:text-red-500">
                   <a href="#">Sontact</a>
                 </li>
-                <li  className="NavbarList">
+                <li  className="hover:text-red-500">
                   <a href="#">Feedback</a>
                 </li>
               </ul>
