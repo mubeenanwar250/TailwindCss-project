@@ -8,12 +8,12 @@ function Card() {
       <div className="flex flex-col md:flex-row justify-between justify-center w-auto bg-white-100 ">
         <div className="shadow-xl m-20 bg-gray-400 rounded-3xl hover:shadow-2xl shadow-indigo-900 cursor-pointer">
           <div>
-            <img src={pic} className="h-2/5 rounded-t-3xl"  />
+            <img src={pic} alt='' className="h-2/5 rounded-t-3xl"  />
           </div>
-          <div className="text-center mt-10">
-            <span className="text-red-600 text-xl font-bold">4 days ago</span>
+          <div className="text-center mt-12">
+            <span className="text-red-600 text-[200px] font-bold">4 days ago</span>
             <h1 className="text-4xl font-bold">Post one</h1>
-            <p className="text-lg mt-8 ">
+            <p className="text-lg mt-8 font-special  ">
               Sit labore est consectetur veniam velit <br /> voluptate.
               Voluptate anim consequat aliqua voluptate proident Lorem aliquip{" "}
             </p>
@@ -37,10 +37,10 @@ function Card() {
           <div>
             <img src={pic1} className="h-2/5 rounded-t-3xl " />
           </div>
-          <div className="text-center mt-10">
+          <div className="text-center mt-12">
             <span className="text-red-400 text-xl font-bold">5 days ago</span>
             <h1 className="text-4xl font-bold">Post Two</h1>
-            <p className="text-lg mt-8 ">
+            <p className="text-lg mt-8 font-special">
               Sit labore est consectetur veniam velit <br /> voluptate.
               Voluptate anim consequat aliqua voluptate proident Lorem aliquip
             </p>
@@ -64,10 +64,11 @@ function Card() {
           <div>
             <img src={pic2} className="h-2/5 rounded-t-3xl" />
           </div>
-          <div className="text-center mt-10">
+        '1': '1px',
+          <div className="text-center mt-12">
             <span className="text-green-400 text-xl font-bold">6 days ago</span>
             <h1 className="text-4xl font-bold">Post Three</h1>
-            <p className="text-lg mt-8 ">
+            <p className="text-lg mt-8 font-special ">
               Sit labore est consectetur veniam velit <br /> voluptate.
               Voluptate anim consequat aliqua voluptate proident Lorem aliquip{" "}
             </p>
