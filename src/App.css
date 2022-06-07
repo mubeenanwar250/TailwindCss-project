@@ -4,12 +4,11 @@
 @tailwind utilities;
 
 .overlay {
-  background-image: url(../src/images/1\ \(27\).jpg);
+  background-image: url(../src/images/55.avif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-}
+  }
 /*
 .NavbarList:hover{
   color: rgb(202, 7, 7);
