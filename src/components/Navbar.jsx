@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 function Navbar() {
   const navigator = useNavigate();
   const onClickHandler = () => {
-    navigator("/signinform");
+    navigator("/register");
   };
   const onClickHandler1 = () => {
-    navigator("/signinform");
+    navigator("/signupform");
 
   };
 
@@ -78,7 +78,7 @@ function Navbar() {
                       Contact
                     </a>
                   </li>
-                  <div className="flex flex-col  text-sm font-medium text-white md:flex-row md:space-x-8">
+                  <div className="flex flex-col  text-sm font-medium text-white md:flex-row md:space-x-8 mt-2">
                     <button
                       onClick={onClickHandler}
                       className="bg-red-600  md:w-18 h-8 w-24 rounded-xl hover:text-black"
@@ -86,12 +86,12 @@ function Navbar() {
                       {" "}
                       <a href="#">Sign In</a>{" "}
                     </button>
-                    <button
+                    {/* <button
                       onClick={onClickHandler1}
                       className="bg-green-600  md:w-18 h-8 w-24 rounded-xl hover:text-black"
                     >
                       <a href="#">Sign Up</a>
-                    </button>
+                    </button> */}
                   </div>
                 </ul>
               </div>

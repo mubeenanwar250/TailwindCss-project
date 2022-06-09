@@ -1,17 +1,14 @@
 import React from "react";
 
-export const SignIn = () => {
+export const SignIn = ({register}) => {
+
+
   return (
     <div className="bg-grey-lighter min-h-screen flex flex-col">
       <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2 ">
         <div className="bg-white px-6 py-8 rounded shadow-md text-black w-full hover:shadow-xl">
-          <h1 className="mb-8 text-3xl text-center">Sign up</h1>
-          <input
-            type="text"
-            className="block border border-grey-light w-full p-3 rounded mb-4"
-            name="fullname"
-            placeholder="Full Name"
-          />
+          <h1 className="mb-8 text-3xl text-center">Sign Ip</h1>
+          
 
           <input
             type="text"
@@ -26,22 +23,16 @@ export const SignIn = () => {
             name="password"
             placeholder="Password"
           />
-          <input
-            type="password"
-            className="block border border-grey-light w-full p-3 rounded mb-4"
-            name="confirm_password"
-            placeholder="Confirm Password"
-          />
-
+         
           <button
-            type="submit"
-            className="w-full text-center py-3 border border-black rounded bg-green text-black hover:bg-green-dark focus:outline-none my-1"
+            type=""
+            className="w-full text-center py-3 bg-yellow-400  border rounded-full text-black  focus:outline-none my-1"
           >
-            Create Account
+            LogIn Account
           </button>
 
           <div className="text-center text-sm text-grey-dark mt-4">
-            By signing up, you agree to the
+            By Login, you agree to the
             <a
               className="no-underline border-b border-grey-dark text-grey-dark"
               href="#"
@@ -59,13 +50,11 @@ export const SignIn = () => {
         </div>
 
         <div className="text-grey-dark mt-6">
-          Already have an account?
-          <a
-            className="no-underline border-b border-blue text-blue"
-            href="../login/"
-          >
-            Log in
-          </a>
+          if you not have an account?
+            <button onClick={register}>
+            sign up
+
+            </button>
           .
         </div>
         
