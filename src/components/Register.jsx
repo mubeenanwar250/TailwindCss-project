@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SignIn from "./form/SignIn";
 import SignUp from "./form/SignUp";
 
-const Register = () => {
+export const Register = () => {
   const [register, setRegister] = useState(false);
 
   return (
