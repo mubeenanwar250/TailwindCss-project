@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SignIn from "./form/SignIn";
 import SignUp from "./form/SignUp";
 
 export const Register = () => {
-  const [register, setRegister] = useState(false);
-
+  const [register, setRegister] = useState(true);
+  
+console.log(register)
   return (
     <div>
       {register ? (

@@ -1,21 +1,21 @@
 import pic from "../images/2222.avif";
 import { useNavigate } from "react-router-dom";
-export const Navbar = ()=> {
+export const Navbar = () => {
   const navigator = useNavigate();
   const onClickHandler = () => {
     navigator("/register");
   };
- 
+
   const handleClick = (e) => {
     e.preventDefault();
-   const element = document.getElementById("mobile-menu")
+    const element = document.getElementById("mobile-menu");
     console.log(" i m clicked", element);
-    element.classList.toggle("hidden")
+    element.classList.toggle("hidden");
   };
 
   return (
     <>
-      <div className="overlay flex-wrap ">
+      <div className="overlay flex-wrap">
         <div>
           <nav className=" text-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
             <div className="container flex flex-wrap justify-between items-center mx-2">
@@ -82,7 +82,6 @@ export const Navbar = ()=> {
                       {" "}
                       <a href="#">Log In</a>{" "}
                     </button>
-                    
                   </div>
                 </ul>
               </div>
@@ -93,7 +92,7 @@ export const Navbar = ()=> {
             <div className="text-right mr-8 mt-10">
               <h2 className="text-yellow-600 text-4xl">WE TAKE</h2>
               <h3 className="text-white text-6xl">PRIDE IN</h3>
-              <span className="text-white text-7xl">OUR FOOD</span>
+                <span className="text-white text-7xl">OUR FOOD</span>
               <p className="text-xl text-white mt-8">
                 Lorem ipsum dolor sit amet{" "}
               </p>
@@ -109,7 +108,6 @@ export const Navbar = ()=> {
       </div>
     </>
   );
-}
+};
 
 export default Navbar;
-

@@ -20,23 +20,23 @@ export const SignIn = ({ register }) => {
   };
 
   const submit = (e) => {
-    e.preventDefault()
     const localUsers = JSON.parse(localStorage.getItem("userData"));
     const userFound = localUsers.filter((singleUser) => {
       return (
         singleUser.password == userData.password &&
         singleUser.email == userData.email
-      );
-    });
-    if (userFound.length) return navigate("/dashboard");
-    alert("wrong password/email");
+        );
+      });
+      if (userFound.length) return navigate("/dashboard");
+      alert("wrong password/email");
+      e.preventDefault()
   };
 
   return (
     <div className="bg-grey-lighter min-h-screen flex flex-col">
       <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2 ">
         <div className="bg-white px-6 py-8 rounded shadow-md text-black w-full hover:shadow-xl">
-          <h1 className="mb-8 text-3xl text-center">Sign Ip</h1>
+          <h1 className="mb-8 text-3xl text-center">Sign In</h1>
 
           <form onSubmit={(e)=>submit(e)}>
             <input

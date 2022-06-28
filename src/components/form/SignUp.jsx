@@ -28,7 +28,8 @@ export const  SignUp = ({ register }) =>{
     setUserRegisterData({...userRegisterData,[e.target.name]:e.target.value})
   }
 
-  const Submit = ()=>{
+  const Submit = (e)=>{
+    e.preventDefault()
     if(userRegisterData.password !== userRegisterData.confirm_password) return alert('password not matched')
     const userFound = userData.filter(user=>user.fullname == userRegisterData.fullname)
     if(userFound.length) return alert('userName already exists')
