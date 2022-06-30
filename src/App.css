@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:ital,wght@1,500&display=swap');
 @tailwind base;
 @tailwind components;
@@ -9,3 +10,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   }
+
+
+#display-image{
+  width: 400px;
+  height: 225px;
+  border: 1px solid black;
+  background-position: center;
+  background-size: cover;
+}

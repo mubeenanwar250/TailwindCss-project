@@ -20,6 +20,7 @@ export const SignIn = ({ register }) => {
   };
 
   const submit = (e) => {
+    e.preventDefault()
     const localUsers = JSON.parse(localStorage.getItem("userData"));
     const userFound = localUsers.filter((singleUser) => {
       return (
@@ -27,9 +28,13 @@ export const SignIn = ({ register }) => {
         singleUser.email == userData.email
         );
       });
-      if (userFound.length) return navigate("/dashboard");
+      console.log(userFound)
+      if (userFound.length) {
+        localStorage.setItem('loggedInUser',JSON.stringify(userFound))
+        navigate("/dashboard");
+        return 
+      }
       alert("wrong password/email");
-      e.preventDefault()
   };
 
   return (
@@ -42,7 +47,7 @@ export const SignIn = ({ register }) => {
             <input
               ref={nameTag}
               type="text"
-              class="block border border-grey-light w-full p-3 rounded mb-4"
+              className="block border border-grey-light w-full p-3 rounded mb-4"
               name="email"
               placeholder="Email"
               onChange={(e) => onChangeEvent(e)}

@@ -1,4 +1,4 @@
-import pic from "../images/2222.avif";
+import pic from "../images/2222.avif";  
 import { useNavigate } from "react-router-dom";
 export const Navbar = () => {
   const navigator = useNavigate();
