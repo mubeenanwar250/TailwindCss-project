@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import picture from "../images/11222.jpg";
 import pic from "../images/2222.avif";
+import pic1 from '../images/5.jpg'
+import Card from "./Card";
 import { FaHamburger } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaRebel } from "react-icons/fa";
+
 
 export const Dashboard = () => {
   const [loggedInUser, setLoggedInUser] = useState();
@@ -9,6 +14,36 @@ export const Dashboard = () => {
     setLoggedInUser(JSON.parse(localStorage.getItem("loggedInUser")));
   }, []);
   console.log(loggedInUser, localStorage.getItem("loggedInUser"));
+
+  const [card, setCard] = useState([
+    {
+      title: "Best Quality food",
+      subtitle: "services",
+      content:
+        "Lorem ipsum dolor sit amet consectetur  adipisicing elitPerspiciatis nisi unde adipisci deleniti maxime esse.",
+      footer: "new features",
+      icon:<FaHamburger/>
+    },
+    {
+      title: "better Quality food",
+      subtitle: "services",
+      content:
+        "Lorem ipsum dolor sit amet consectetur  adipisicing elitPerspiciatis nisi unde adipisci deleniti maxime esse.",
+      footer: "new features",
+      icon:<FaFacebook/>
+
+    },
+    {
+      title: "Best Quality food",
+      subtitle: "services",
+      content:
+        "Lorem ipsum dolor sit amet consectetur  adipisicing elitPerspiciatis nisi unde adipisci deleniti maxime esse.",
+      footer: "new features",
+      icon:<FaRebel/>
+
+    },
+  ]);
+
   return (
     <>
       <div className="overlay flex-wrap">
@@ -35,7 +70,7 @@ export const Dashboard = () => {
             </div>
 
             <a href="#" className="flex justify-center ">
-              <span className=" flex justify-center  text-[80px] ml-32  font-semibold whitespace-nowrap  dark:text-white">
+              <span className=" flex justify-center  md:text-[80px] sm:text-[50px] ml-32  font-semibold whitespace-nowrap  dark:text-white">
                 𝔐𝔬𝔲𝔫𝔱𝔞𝔦𝔫 ℭ𝔲𝔭
               </span>
             </a>
@@ -112,29 +147,178 @@ export const Dashboard = () => {
         </div>
       </div>
       <div>
-        <div className="text-center h-[100vh] bg-[black]">
+        <div className="text-center md:h-[100vh] bg-[black] py-10">
           <h1 className="text-[80px] font-bold text-[white]">Core Featurs</h1>
           <span className="text-[40px] font-medium text-[white]">feature</span>
-        
-         
-         <div className="flex justify-around items-center">
-          <div className="flex flex-col my-20 border-2 border-[red] h-[40vh] w-[20%]  ">
-            <span className="text-[red] flex justify-center mt-6 text-[50px]">
-              {" "}
-              <FaHamburger />{" "}
-            </span>
-            <h1 className="text-[20px] text-[white] font-bold">Best Quality food </h1>
-            <span className="font-semibold text-[yellow] mt-4">services</span>
-            <p className="font-medium text-[white] mt-6">
-              Lorem ipsum dolor sit amet consectetur <br/> adipisicing elit.
-              Perspiciatis, nisi unde <br/>adipisci deleniti maxime esse.
-            </p>
-            <h4 className="font-semibold mt-6 text-[yellow]">new features</h4>
+
+          <div className="md:flex sm:my-20 md:ml-20 sm:block sm:ml-8 ">
+            {card.map((element) => {
+              return <Card element={element} />;
+            })}
           </div>
         </div>
-         
-       
       </div>
+
+      <div className="overlay2">
+        <div className="text-center pt-6">
+          <h1 className="text-[60px] text-[white] font-bold ">POPULAR MEAL</h1>
+          <span className="text-[35px] text-[white] font-medium">feature</span>
+        </div>
+         <div className="md:flex p-24 md:ml-24 sm:block">
+         <div class=" w-6/12 ">
+          <div class="flex">
+            <div class=" w-24 mb-4">
+              <img src={pic1} class=" h-20 w-20 rounded-full" alt="" />
+            </div>
+            <div class=" w-11/12 ml-4 mb-2 pt-4 ">
+              <h2 class="capitalize text-xl  font-bold font-sans text-[white]">
+                mini cheese burger....................
+                <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">$9.00</span>
+              </h2>
+              <p class="capitalize text-sm text-[white]">
+                Lorem ipsum consectetur adipisicing elit. Hic, facere.
+              </p>
+            </div>
+          </div>
+          <div class="flex">
+            <div class=" w-24 mb-4 ">
+              <img
+                src={pic1}
+                class=" h-20 w-20 brder rounded-full"
+                alt=""
+              />
+            </div>
+            <div class=" w-11/12 ml-4 mb-2 pt-4 ">
+              <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
+                double size burger..................
+                <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">$11.00</span>
+              </h2>
+              <p class="capitalize text-sm text-[white]">
+                Lorem ipsum consectetur adipisicing elit. Hic, facere.
+              </p>
+            </div>
+          </div>
+          <div class="flex">
+            <div class=" w-24 mb-4 ">
+              <img src={pic1} class="w-20 h-20 rounded-full" alt="" />
+            </div>
+            <div class=" w-11/12 ml-4 mb-2 pt-4 ">
+              <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
+                bacon, egg & cheese...............
+                <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">$13.00</span>
+              </h2>
+              <p class="capitalize text-sm text-[white]">
+                Lorem ipsum consectetur adipisicing elit. Hic, facere.
+              </p>
+            </div>
+          </div>
+          <div class="flex">
+            <div class=" w-24 mb-4">
+              <img src={pic1} class="w-20 h-20 rounded-full" alt="" />
+            </div>
+            <div class=" w-11/12 ml-4 mb-2 pt-4 ">
+              <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
+                pulled porx burger...................
+                <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">$18.00</span>
+              </h2>
+              <p class="capitalize text-sm text-[white]">
+                Lorem ipsum consectetur adipisicing elit. Hic, facere.
+              </p>
+            </div>
+          </div>
+          <div class="flex">
+            <div class=" w-24 ">
+              <img src={pic1} class="w-20 h-20 rounded-full" alt="" />
+            </div>
+            <div class=" w-11/12 ml-4 mb-2 pt-4   ">
+              <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
+                fried chicken burger................
+                <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">$11.00</span>
+              </h2>
+              <p class="capitalize text-sm text-[white]">
+                Lorem ipsum consectetur adipisicing elit. Hic, facere.
+              </p>
+            </div>
+          </div>
+        </div>
+         <div class=" w-6/12 ">
+          <div class="flex">
+            <div class=" w-24 mb-4">
+              <img src={pic1} class=" h-20 w-20 rounded-full" alt="" />
+            </div>
+            <div class=" w-11/12 ml-4 mb-2 pt-4 ">
+              <h2 class="capitalize text-xl  font-bold font-sans text-[white]">
+                mini cheese burger....................
+                <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">$9.00</span>
+              </h2>
+              <p class="capitalize text-sm text-[white]">
+                Lorem ipsum consectetur adipisicing elit. Hic, facere.
+              </p>
+            </div>
+          </div>
+          <div class="flex">
+            <div class=" w-24 mb-4 ">
+              <img
+                src={pic1}
+                class=" h-20 w-20 brder rounded-full"
+                alt=""
+              />
+            </div>
+            <div class=" w-11/12 ml-4 mb-2 pt-4 ">
+              <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
+                double size burger..................
+                <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">$11.00</span>
+              </h2>
+              <p class="capitalize text-sm text-[white]">
+                Lorem ipsum consectetur adipisicing elit. Hic, facere.
+              </p>
+            </div>
+          </div>
+          <div class="flex">
+            <div class=" w-24 mb-4 ">
+              <img src={pic1} class="w-20 h-20 rounded-full" alt="" />
+            </div>
+            <div class=" w-11/12 ml-4 mb-2 pt-4 ">
+              <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
+                bacon, egg & cheese...............
+                <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">$13.00</span>
+              </h2>
+              <p class="capitalize text-sm text-[white]">
+                Lorem ipsum consectetur adipisicing elit. Hic, facere.
+              </p>
+            </div>
+          </div>
+          <div class="flex">
+            <div class=" w-24 mb-4">
+              <img src={pic1} class="w-20 h-20 rounded-full" alt="" />
+            </div>
+            <div class=" w-11/12 ml-4 mb-2 pt-4 ">
+              <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
+                pulled porx burger...................
+                <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">$18.00</span>
+              </h2>
+              <p class="capitalize text-sm text-[white]">
+                Lorem ipsum consectetur adipisicing elit. Hic, facere.
+              </p>
+            </div>
+          </div>
+          <div class="flex">
+            <div class=" w-24 ">
+              <img src={pic1} class="w-20 h-20 rounded-full" alt="" />
+            </div>
+            <div class=" w-11/12 ml-4 mb-2 pt-4   ">
+              <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
+                fried chicken burger................
+                <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">$11.00</span>
+              </h2>
+              <p class="capitalize text-sm text-[white]">
+                Lorem ipsum consectetur adipisicing elit. Hic, facere.
+              </p>
+            </div>
+          </div>
+        </div>
+         </div>
+       
       </div>
     </>
   );
