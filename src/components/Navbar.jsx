@@ -100,14 +100,15 @@ export const Navbar = () => {
 
         <div className="flex justify-center flex-wrap md:m-28 sm:m-0  ">
           <div className="text-right mr-8 mt-10">
-            <h2 className="text-yellow-600 text-4xl">WE TAKE</h2>
-            <h3 className="text-white text-6xl">PRIDE IN</h3>
-            <span className="text-white text-7xl">OUR FOOD</span>
+            <h2 className="text-yellow-600 text-4xl">{stockData.Navbar[0].itemSeven}</h2>
+            
+            <h3 className="text-white text-6xl">{stockData.Navbar[0].itemEight}</h3>
+            <span className="text-white text-7xl">{stockData.Navbar[0].itemNine}</span>
             <p className="text-xl text-white mt-8">
-              Lorem ipsum dolor sit amet{" "}
+            {stockData.Navbar[0].itemTen} {" "}
             </p>
             <button className="w-48 p-3 mt-8 font-medium md:ml-10 text-2xl capitalize rounded-full bg-yellow-400">
-              book table
+            {stockData.Navbar[0].itemEleven}
             </button>
           </div>
           <div className="my-10">

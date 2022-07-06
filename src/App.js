@@ -2,7 +2,6 @@ import "./App.css"
 import './index'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {Dashboard,Navbar,Register} from './components'
-
 function App() {
   return (
     <>

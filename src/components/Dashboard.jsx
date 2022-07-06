@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import picture from "../images/11222.jpg";
 import pic from "../images/2222.avif";
-import pic1 from "../images/5.jpg";
 import Card from "./Card";
 import { FaHamburger } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaRebel } from "react-icons/fa";
-import { FaStar} from "react-icons/fa";
-import "../Data"
+import { FaStar } from "react-icons/fa";
+import { stockData } from "../Data";
+import CardTwo from "./form/CardTwo";
+import CardThree from "./CardThree";
 
 export const Dashboard = () => {
   const [loggedInUser, setLoggedInUser] = useState();
@@ -43,6 +44,24 @@ export const Dashboard = () => {
     },
   ]);
 
+  const [cardTwo, setCardTwo] = useState([
+    {
+      icon: <FaStar />,
+      content:
+        "Lorem ipsum dolor sit amet consectetur  adipisicing elitPerspiciatis nisi unde adipisci deleniti maxime esseLorem ipsum dolor sit amet consectetur  adipisicing elitPerspiciatis nisi unde adipisci deleniti maxime esseLorem ipsum dolor sit amet consectetur  adipisicing elitPerspiciatis nisi unde adipisci deleniti maxime esse",
+    },
+    {
+      icon: <FaStar />,
+      content:
+        "Lorem ipsum dolor sit amet consectetur  adipisicing elitPerspiciatis nisi unde adipisci deleniti maxime esseLorem ipsum dolor sit amet consectetur  adipisicing elitPerspiciatis nisi unde adipisci deleniti maxime esseLorem ipsum dolor sit amet consectetur  adipisicing elitPerspiciatis nisi unde adipisci deleniti maxime esse",
+    },
+    {
+      icon: <FaStar />,
+      content:
+        "Lorem ipsum dolor sit amet consectetur  adipisicing elitPerspiciatis nisi unde adipisci deleniti maxime esseLorem ipsum dolor sit amet consectetur  adipisicing elitPerspiciatis nisi unde adipisci deleniti maxime esseLorem ipsum dolor sit amet consectetur  adipisicing elitPerspiciatis nisi unde adipisci deleniti maxime esse",
+    },
+  ]);
+
   return (
     <>
       <div className="overlay flex-wrap">
@@ -52,13 +71,13 @@ export const Dashboard = () => {
             <div>
               {" "}
               <img
-                className="max-w-[100%] h-[15vh] rounded-full"
+                className="max-w-[100%] h-[15vh] rounded-lg"
                 src={loggedInUser?.[0]?.img}
                 alt=""
               />
             </div>
 
-            <div className="max-w-[13%]">
+            <div className="max-w-[13%] px-3">
               {" "}
               <h1 className="bg-[black] font-medium text-[20px]">
                 {loggedInUser?.[0]?.fullname}
@@ -68,23 +87,32 @@ export const Dashboard = () => {
               </h2>
             </div>
 
-            <a href="#" className="flex justify-center ">
+            <a href="#" className="flex justify-center md:ml-[250px]">
               <span className=" flex justify-center  md:text-[80px] sm:text-[50px] ml-32  font-semibold whitespace-nowrap  dark:text-white">
-                𝔐𝔬𝔲𝔫𝔱𝔞𝔦𝔫 ℭ𝔲𝔭
+                {stockData.Navbar[0].itemOne}
               </span>
             </a>
           </nav>
 
           <div className="flex justify-center flex-wrap md:m-28 sm:mt-24  ">
             <div className="text-right mr-8 md:mt-10 sm:mt-24">
-              <h2 className="text-yellow-600 text-4xl">WE TAKE</h2>
-              <h3 className="text-white text-6xl">PRIDE IN</h3>
-              <span className="text-white text-7xl">OUR FOOD</span>
+              <h2 className="text-yellow-600 text-4xl">
+                {" "}
+                {stockData.Navbar[0].itemSeven}
+              </h2>
+              <h3 className="text-white text-6xl">
+                {" "}
+                {stockData.Navbar[0].itemEight}
+              </h3>
+              <span className="text-white text-7xl">
+                {" "}
+                {stockData.Navbar[0].itemNine}
+              </span>
               <p className="text-xl text-white mt-8">
-                Lorem ipsum dolor sit amet{" "}
+                {stockData.Navbar[0].itemTen}{" "}
               </p>
               <button className="w-48 p-3 mt-8 font-medium md:ml-10 text-2xl capitalize rounded-full bg-yellow-400">
-                book table
+                {stockData.Navbar[0].itemEleven}
               </button>
             </div>
             <div className="my-10">
@@ -98,33 +126,28 @@ export const Dashboard = () => {
         <div>
           <img src={picture} className="md:h-[90vh] md:w-[100%] " />
         </div>
-        <div className="md:w-[40%] sm:w-[100%] md:m-12 sm:m-0 md:border-2 md:border-red-300 md:p-4 sm:p-16 sm:bg-[black]">
-          <h5 className="text-[yellow] text-[20px] font-bold">
-            Stifen Albort Jonny{" "}
+        <div className="md:w-[40%] sm:w-[100%] md:m-12  sm:m-0 md:border-2 md:border-red-300 md:p-4 sm:p-16 sm:bg-[black]">
+          <h5 className="text-[yellow] text-[20px] font-bold m-4 ml-8">
+            {stockData.cook[0].textOne}{" "}
           </h5>
 
-          <h1 className="text-[60px] text-[#eeeef0] font-bold">
-            Located In A <br /> Small Town
+          <h1 className="text-[60px] text-[#eeeef0] font-bold m-8">
+          {stockData.cook[0].textTwo}
           </h1>
-          <p className="text-[white] font-medium">
-            Lorem vel ipsa doloribus! Mollitia laudantium velit voluptatem eos
-            nisi{" "}
+          <p className="text-[white] font-medium m-10">
+          {stockData.cook[0].textThree}{" "}
           </p>
 
-          <div className="flex mt-16   text-[white] ">
+          <div className="flex mt-16   text-[white] m-6 ">
             <p className="font-medium mr-4">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatum officia maxime obcaecati a iure eius. Lorem ipsum dolor
-              sit, amet consectetur Lorem ipsum dolor sit, amet consectetur
+            {stockData.cook[0].textFour}
             </p>
             <p className="font-medium ">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatum officia maxime obcaecati a iure eius. Lorem ipsum dolor
-              sit, amet consectetur Lorem ipsum dolor sit, amet consectetur
+            {stockData.cook[0].textFour}
             </p>
           </div>
 
-          <div className="flex justify-between mt-14">
+          <div className="flex justify-between mx-10">
             <div className="flex">
               <div className="">
                 <img
@@ -134,14 +157,15 @@ export const Dashboard = () => {
               </div>
               <div>
                 <h1 className="text-[white] text-[20px] font-bold mt-6 ml-4">
-                  Black & White
+                {stockData.cook[0].textFive}
                 </h1>
                 <h4 className="text-[yellow] text-[15px] ml-4 font-medium ">
-                  Services
+                {stockData.cook[0].textSix  }
+                  
                 </h4>
               </div>
             </div>
-            <div className="text-[grey] text-[40px] m-auto">𝔐𝔬𝔲𝔫𝔱𝔞𝔦𝔫 ℭ𝔲𝔭</div>
+            <div className="text-[grey] text-[40px] m-auto">{stockData.Navbar[0].itemOne}</div>
           </div>
         </div>
       </div>
@@ -163,215 +187,26 @@ export const Dashboard = () => {
           <h1 className="text-[60px] text-[white] font-bold ">POPULAR MEAL</h1>
           <span className="text-[35px] text-[white] font-medium">feature</span>
         </div>
-        <div className="md:flex p-24 md:ml-24 sm:block">
-          <div class=" w-6/12 ">
-            <div class="flex">
-              <div class=" w-24 mb-4">
-                <img src={pic1} class=" h-20 w-20 rounded-full" alt="" />
-              </div>
-              <div class=" w-11/12 ml-4 mb-2 pt-4 ">
-                <h2 class="capitalize text-xl  font-bold font-sans text-[white]">
-                  mini cheese burger....................
-                  <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">
-                    $9.00
-                  </span>
-                </h2>
-                <p class="capitalize text-sm text-[white]">
-                  Lorem ipsum consectetur adipisicing elit. Hic, facere.
-                </p>
-              </div>
+        <div>
+          <div className="md:flex justify-center py-28 sm:block ">
+            <div className="md:m-10">
+              {[1].map(() => {
+                return <CardThree />;
+              })}
             </div>
-            <div class="flex">
-              <div class=" w-24 mb-4 ">
-                <img src={pic1} class=" h-20 w-20 brder rounded-full" alt="" />
-              </div>
-              <div class=" w-11/12 ml-4 mb-2 pt-4 ">
-                <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
-                  double size burger..................
-                  <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">
-                    $11.00
-                  </span>
-                </h2>
-                <p class="capitalize text-sm text-[white]">
-                  Lorem ipsum consectetur adipisicing elit. Hic, facere.
-                </p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class=" w-24 mb-4 ">
-                <img src={pic1} class="w-20 h-20 rounded-full" alt="" />
-              </div>
-              <div class=" w-11/12 ml-4 mb-2 pt-4 ">
-                <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
-                  bacon, egg & cheese...............
-                  <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">
-                    $13.00
-                  </span>
-                </h2>
-                <p class="capitalize text-sm text-[white]">
-                  Lorem ipsum consectetur adipisicing elit. Hic, facere.
-                </p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class=" w-24 mb-4">
-                <img src={pic1} class="w-20 h-20 rounded-full" alt="" />
-              </div>
-              <div class=" w-11/12 ml-4 mb-2 pt-4 ">
-                <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
-                  pulled porx burger...................
-                  <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">
-                    $18.00
-                  </span>
-                </h2>
-                <p class="capitalize text-sm text-[white]">
-                  Lorem ipsum consectetur adipisicing elit. Hic, facere.
-                </p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class=" w-24 ">
-                <img src={pic1} class="w-20 h-20 rounded-full" alt="" />
-              </div>
-              <div class=" w-11/12 ml-4 mb-2 pt-4   ">
-                <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
-                  fried chicken burger................
-                  <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">
-                    $11.00
-                  </span>
-                </h2>
-                <p class="capitalize text-sm text-[white]">
-                  Lorem ipsum consectetur adipisicing elit. Hic, facere.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class=" w-6/12 ">
-            <div class="flex">
-              <div class=" w-24 mb-4">
-                <img src={pic1} class=" h-20 w-20 rounded-full" alt="" />
-              </div>
-              <div class=" w-11/12 ml-4 mb-2 pt-4 ">
-                <h2 class="capitalize text-xl  font-bold font-sans text-[white]">
-                  mini cheese burger....................
-                  <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">
-                    $9.00
-                  </span>
-                </h2>
-                <p class="capitalize text-sm text-[white]">
-                  Lorem ipsum consectetur adipisicing elit. Hic, facere.
-                </p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class=" w-24 mb-4 ">
-                <img src={pic1} class=" h-20 w-20 brder rounded-full" alt="" />
-              </div>
-              <div class=" w-11/12 ml-4 mb-2 pt-4 ">
-                <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
-                  double size burger..................
-                  <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">
-                    $11.00
-                  </span>
-                </h2>
-                <p class="capitalize text-sm text-[white]">
-                  Lorem ipsum consectetur adipisicing elit. Hic, facere.
-                </p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class=" w-24 mb-4 ">
-                <img src={pic1} class="w-20 h-20 rounded-full" alt="" />
-              </div>
-              <div class=" w-11/12 ml-4 mb-2 pt-4 ">
-                <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
-                  bacon, egg & cheese...............
-                  <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">
-                    $13.00
-                  </span>
-                </h2>
-                <p class="capitalize text-sm text-[white]">
-                  Lorem ipsum consectetur adipisicing elit. Hic, facere.
-                </p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class=" w-24 mb-4">
-                <img src={pic1} class="w-20 h-20 rounded-full" alt="" />
-              </div>
-              <div class=" w-11/12 ml-4 mb-2 pt-4 ">
-                <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
-                  pulled porx burger...................
-                  <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">
-                    $18.00
-                  </span>
-                </h2>
-                <p class="capitalize text-sm text-[white]">
-                  Lorem ipsum consectetur adipisicing elit. Hic, facere.
-                </p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class=" w-24 ">
-                <img src={pic1} class="w-20 h-20 rounded-full" alt="" />
-              </div>
-              <div class=" w-11/12 ml-4 mb-2 pt-4   ">
-                <h2 class="capitalize text-xl   font-bold font-sans text-[white]">
-                  fried chicken burger................
-                  <span class="rounded-full px-4 py-1 bg-[yellow] text-[black]">
-                    $11.00
-                  </span>
-                </h2>
-                <p class="capitalize text-sm text-[white]">
-                  Lorem ipsum consectetur adipisicing elit. Hic, facere.
-                </p>
-              </div>
+            <div className="md:m-10">
+              {[1].map(() => {
+                return <CardThree />;
+              })}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="h-[100vh]">
-        <div>
-          <div className="flex mx-auto mt-32 sm:bg-black w-[70%]">
-            <div className="flex flex-col border-2 border-[red] h-[40vh] w-[70%] ">
-              <span className="text-[red] flex justify-center mt-6 text-[50px]">
-                <FaStar/> 
-              </span>
-
-              <p className="font-medium text-[white] mt-6">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-                quos unde porro illo officiis rerum vero, distinctio eius modi
-                in provident cupiditate excepturi neque. Repellendus quo vero
-                similique ipsa et.
-              </p>
-            </div>
-            <div className="flex flex-col  border-2 border-[red] h-[40vh] w-[70%]  ">
-              <span className="text-[red] flex justify-center mt-6 text-[50px]">
-                <FaStar/> 
-              </span>
-
-              <p className="font-medium text-[white] mt-6">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-                quos unde porro illo officiis rerum vero, distinctio eius modi
-                in provident cupiditate excepturi neque. Repellendus quo vero
-                similique ipsa et.
-              </p>
-            </div>
-            <div className="flex flex-col border-2 border-[red] h-[40vh] w-[70%]  ">
-              <span className="text-[red] flex justify-center mt-6 text-[50px]">
-                <FaStar/> 
-              </span>
-
-              <p className="font-medium text-[white] mt-6">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-                quos unde porro illo officiis rerum vero, distinctio eius modi
-                in provident cupiditate excepturi neque. Repellendus quo vero
-                similique ipsa et.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div className="md:flex sm:my-20 md:ml-20 sm:block sm:ml-8 ">
+        {cardTwo.map((element) => {
+          return <CardTwo element={element} />;
+        })}
       </div>
     </>
   );
