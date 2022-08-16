@@ -4,7 +4,7 @@ function Card({ element }) {
   return (
     <>
       <div className="flex my-16 ml-20 sm:bg-black">
-        <div className="flex flex-col border-2 border-[red] h-[40vh] w-[70%]  ">
+        <div className="flex flex-col p-2 border-2 border-[red] h-[45vh] w-[70%]  ">
           <span className="text-[red] flex justify-center mt-6 text-[50px]">
             {element.icon}
           </span>

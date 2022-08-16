@@ -126,12 +126,12 @@ export const Dashboard = () => {
         <div>
           <img src={picture} className="md:h-[90vh] md:w-[100%] " />
         </div>
-        <div className="md:w-[40%] sm:w-[100%] md:m-12  sm:m-0 md:border-2 md:border-red-300 md:p-4 sm:p-16 sm:bg-[black]">
-          <h5 className="text-[yellow] text-[20px] font-bold m-4 ml-8">
+        <div className="md:w-[40%] md:h-[90vh] sm:w-[100%] md:m-12  sm:m-0 md:border-2 md:border-red-300 md:p-4 sm:p-16 sm:bg-[black]">
+          <h5 className="text-[yellow] text-[25px] font-bold m-4 ml-8">
             {stockData.cook[0].textOne}{" "}
           </h5>
 
-          <h1 className="text-[60px] text-[#eeeef0] font-bold m-8">
+          <h1 className="text-[40px] text-[#eeeef0] font-bold m-8">
           {stockData.cook[0].textTwo}
           </h1>
           <p className="text-[white] font-medium m-10">
@@ -147,7 +147,7 @@ export const Dashboard = () => {
             </p>
           </div>
 
-          <div className="flex justify-between mx-10">
+          <div className="flex justify-between mx-10 my-16">
             <div className="flex">
               <div className="">
                 <img
@@ -171,7 +171,7 @@ export const Dashboard = () => {
       </div>
       <div>
         <div className="text-center md:h-[100vh] bg-[black] py-10">
-          <h1 className="text-[80px] font-bold text-[white]">Core Featurs</h1>
+          <h1 className="text-[80px] font-bold text-[white]">Core Features</h1>
           <span className="text-[40px] font-medium text-[white]">feature</span>
 
           <div className="md:flex sm:my-20 md:ml-20 sm:block sm:ml-8 ">
@@ -203,7 +203,7 @@ export const Dashboard = () => {
         </div>
       </div>
 
-      <div className="md:flex sm:my-20 md:ml-20 sm:block sm:ml-8 ">
+      <div className="md:flex sm:my-20 md md:ml-20 sm:block sm:ml-8 ">
         {cardTwo.map((element) => {
           return <CardTwo element={element} />;
         })}

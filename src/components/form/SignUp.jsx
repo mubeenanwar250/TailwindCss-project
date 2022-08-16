@@ -22,7 +22,7 @@ export const SignUp = ({ register }) => {
 
   const inputChange = (e) => {
     console.log("ere");
-    if (e.target.name == "img") {
+    if (e.target.name === "img") {
       base64(e.target.files[0])
         .then((result) => {
           setUserRegisterData({
@@ -48,7 +48,7 @@ export const SignUp = ({ register }) => {
     if (userRegisterData.password !== userRegisterData.confirm_password)
       return alert("password not matched");
     const userFound = userData.filter(
-      (user) => user.fullname == userRegisterData.fullname
+      (user) => user.fullname === userRegisterData.fullname
     );
     console.log(userFound);
     if (userFound.length) return alert("userName already exists");
